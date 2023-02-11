@@ -98,7 +98,7 @@ class SearchScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: AppLayout.getHeight(400),
+                height: AppLayout.getHeight(425),
                 width: size.width * 0.42,
                 padding: EdgeInsets.symmetric(
                     horizontal: AppLayout.getHeight(15),
@@ -139,7 +139,7 @@ class SearchScreen extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
-                        height: AppLayout.getHeight(210),
+                        height: AppLayout.getHeight(200),
                         decoration: BoxDecoration(
                             color: Color(0xFF3AB8B8),
                             borderRadius:
@@ -205,7 +205,9 @@ class SearchScreen extends StatelessWidget {
                         Gap(AppLayout.getHeight(5)),
                         RichText(
                             text: const TextSpan(children: [
-                          TextSpan(text: '😍', style: TextStyle(fontSize: 38))
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 30)),
+                          TextSpan(text: '🥰', style: TextStyle(fontSize: 45)),
+                          TextSpan(text: '😘', style: TextStyle(fontSize: 30)),
                         ])),
                       ],
                     ),
