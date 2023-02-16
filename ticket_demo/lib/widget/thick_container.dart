@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class ThickContainert extends StatelessWidget {
-  const ThickContainert({super.key});
+  final bool? isColor;
+  const ThickContainert({Key? key, required this.isColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +15,8 @@ class ThickContainert extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          width: 2.5,
-          color: Colors.white,
-        ),
+            width: 2.5,
+            color: isColor == null ? Colors.white : Color(0xFF8ACCF7)),
       ),
     );
   }

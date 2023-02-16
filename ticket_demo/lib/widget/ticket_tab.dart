@@ -20,7 +20,7 @@ class AppTicketTabs extends StatelessWidget {
         padding: const EdgeInsets.all(3.5),
         child: Row(
           children: [
-            //Airline tickets
+            //FirstTab
             Container(
               width: size.width * .44,
               padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
@@ -33,7 +33,7 @@ class AppTicketTabs extends StatelessWidget {
                 child: Text(firstTab),
               ),
             ),
-            //Hotels
+            //SecondTab
             Container(
               width: size.width * .44,
               padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),

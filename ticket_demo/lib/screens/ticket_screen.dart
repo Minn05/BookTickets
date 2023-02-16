@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_demo/screens/ticket_view.dart';
+import 'package:ticket_demo/utils/app_info_list.dart';
 import 'package:ticket_demo/utils/app_layout.dart';
 import 'package:ticket_demo/utils/app_styles.dart';
+import 'package:ticket_demo/widget/ticket_tab.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({super.key});
@@ -26,7 +29,37 @@ class TicketScreen extends StatelessWidget {
               Text(
                 "Tickets",
                 style: Styles.headLineStyle1,
-              )
+              ),
+              Gap(AppLayout.getHeight(20)),
+              const AppTicketTabs(firstTab: "UnComing", secondTab: "Previous"),
+              Gap(AppLayout.getHeight(20)),
+              Container(
+                padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
+                child: TicketView(
+                  ticket: ticketList[0],
+                  isColor: true,
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15)),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("Flutter D8", style: Styles.headLineStyle3),
+                            Gap(AppLayout.getHeight(5)),
+                            Text("Passenger", style: Styles.headLineStyle3),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ],
