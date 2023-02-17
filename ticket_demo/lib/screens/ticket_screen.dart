@@ -7,6 +7,7 @@ import 'package:ticket_demo/screens/ticket_view.dart';
 import 'package:ticket_demo/utils/app_info_list.dart';
 import 'package:ticket_demo/utils/app_layout.dart';
 import 'package:ticket_demo/utils/app_styles.dart';
+import 'package:ticket_demo/widget/column_layout.dart';
 import 'package:ticket_demo/widget/ticket_tab.dart';
 
 class TicketScreen extends StatelessWidget {
@@ -44,17 +45,21 @@ class TicketScreen extends StatelessWidget {
                 color: Colors.white,
                 margin:
                     EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15)),
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15)),
                 child: Column(
                   children: [
                     Row(
-                      children: [
-                        Column(
-                          children: [
-                            Text("Flutter D8", style: Styles.headLineStyle3),
-                            Gap(AppLayout.getHeight(5)),
-                            Text("Passenger", style: Styles.headLineStyle3),
-                          ],
-                        )
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        AppColumnLayout(
+                            firstText: "Flutter DB",
+                            secondText: "Passenger",
+                            alignment: CrossAxisAlignment.start),
+                        AppColumnLayout(
+                            firstText: "5221 364869",
+                            secondText: "Passport",
+                            alignment: CrossAxisAlignment.end),
                       ],
                     ),
                   ],
