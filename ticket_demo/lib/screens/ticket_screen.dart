@@ -53,13 +53,17 @@ class TicketScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
                         AppColumnLayout(
-                            firstText: "Flutter DB",
-                            secondText: "Passenger",
-                            alignment: CrossAxisAlignment.start),
+                          firstText: "Flutter DB",
+                          secondText: "Passenger",
+                          alignment: CrossAxisAlignment.start,
+                          isColor: true,
+                        ),
                         AppColumnLayout(
-                            firstText: "5221 364869",
-                            secondText: "Passport",
-                            alignment: CrossAxisAlignment.end),
+                          firstText: "5221 364869",
+                          secondText: "Passport",
+                          alignment: CrossAxisAlignment.end,
+                          isColor: true,
+                        ),
                       ],
                     ),
                   ],
