@@ -24,7 +24,6 @@ class AppColumnLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: alignment,
-      //style: isColor == null? Styles.headLineStyle3.copyWith(color: Colors.white): Styles.headLineStyle3,
       children: [
         Text(firstText,
             style: isColor == null
